@@ -62,7 +62,7 @@
     ionic start APP_NAME tabs;
     cd APP_NAME;
     npm install -g ios-sim;
-  ionic platform add ios;
+    ionic platform add ios;
     ionic platform add android;
     ```
 
