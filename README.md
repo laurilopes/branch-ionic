@@ -54,7 +54,7 @@
 
 ## Ionic Setup
 
-- **install ionic** *(optional if you already have PhoneGap installed)*
+- **install ionic** *(optional if you already have installed)*
 
     ```sh
     cd APP_LOCATION;
