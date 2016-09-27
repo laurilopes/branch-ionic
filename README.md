@@ -121,13 +121,13 @@
     ```
 
 - **append branch javascript wrappers**
-    - APP_NAME/www/templates/tab-dash.html *(optional console logging test code)*
+    - APP_NAME/www/templates/tab-dash.html *(optional logging test code)*
 
         ```html
         <button class="button button-full button-positive" ng-click="buttonPressed()">test</button>
         ```
     
-    - APP_NAME/www/js/controller.js *(optional console logging test code)*
+    - APP_NAME/www/js/controller.js *(optional logging test code)*
 
         ```javascript
         .controller('DashCtrl', function($scope) {
@@ -137,7 +137,7 @@
         })
         ```
 
-    - APP_NAME/www/js/app.js *(`InitSession();` is required, `SetDebug(true);` is optional)*
+    - APP_NAME/www/js/app.js *(`InitSession();` is required and `SetDebug(true);` is optional)*
 
         ```javascript
         .run(function($ionicPlatform) {
