@@ -23,6 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     $ionicPlatform.on('deviceready', function(){
       console.log("install");
+      SetDebug(true);
       InitSession();
     });
 

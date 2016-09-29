@@ -109,10 +109,10 @@
     ```
 
 - **update config.xml** *(values should reflect [Branch Dashboard](https://dashboard.branch.io/settings/link))*
-    - replace `xxxx` with your `Apple App Prefix` and `Link Domain`
+    - replace `xxxx` with your `Bundle Identifier` and `Apple App Prefix` and `Link Domain`
     
     ```html
-  <widget id="com.eneff.branch.example" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <widget id="xxxx" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
         <branch-config>
           <ios-team-id value="xxxx"/>
           <host name="xxxx.app.link" scheme="https"/>

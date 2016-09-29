@@ -1,33 +1,53 @@
 "use strict";
 
+var branchlog = document.getElementById('data');
+function updateBranchLog(text) {
+    console.log('Trigger updateBranchLog()');
+
+    console.log(text);
+    if ('textContent' in branchlog) {
+        branchlog.textContent = text;
+    } else {
+        branchlog.innerText = text;
+    }
+}
+
 function DeepLinkHandler(data) {
-    console.log('Trigger DeepLinkHandler()', data);
+    console.log('Trigger DeepLinkHandler()');
 
     if (data) {
-        alert('Initialize: ' + JSON.stringify(data));
+        updateBranchLog(JSON.stringify(data));
     } else {
-        alert('No data found');
+        updateBranchLog('No data found');
     }
 }
 
 function NonBranchLinkHandler(data) {
-    console.log('Trigger NonBranchLinkHandler()', data);
+    console.log('Trigger NonBranchLinkHandler()');
 
     if (data) {
         alert('Non-branch link found: ' + JSON.stringify(data));
     }
 }
 
+function SetDebug(isEnabled) {
+    console.log('Trigger SetDebug()');
+
+    Branch.setDebug(isEnabled);
+
+    alert('Debug mode enabled');
+}
+
 function InitSession() {
     console.log('Trigger InitSession()');
 
-    Branch.debugMode = true;
     Branch.setMixpanelToken('<your-mixpanel-token-here>');
+    Branch.debugMode = true;
     Branch.initSession().then(function (res) {
-        console.log(res);
+        updateBranchLog(JSON.stringify(res));
         alert('Response: ' + JSON.stringify(res));
     }).catch(function (err) {
-        console.error(err);
+        updateBranchLog(err);
         alert('Error: ' + JSON.stringify(err));
     });
 }
@@ -99,6 +119,7 @@ function Logout() {
 var branchUniversalObj = null;
 
 function CreateBranchUniversalObject() {
+
     console.log('Trigger CreateBranchUniversalObject()');
 
     var properties = {
