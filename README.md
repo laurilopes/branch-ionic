@@ -229,3 +229,25 @@
   # Branch.initSession() is failing because Branch is undefined
   if (!ionic.platform.isWebView()) {}
   ```
+
+
+
+    - APP_NAME/www/js/app.js *(`InitSession();` is required and `SetDebug(true);` is optional)*
+
+        ```javascript
+        .run(function($ionicPlatform) {
+          $ionicPlatform.ready(function() {
+            $ionicPlatform.on('deviceready', function() {
+              // ...
+              Branch.initSession().then(function (res) {
+                console.log(res);
+                alert('Response: ' + JSON.stringify(res));
+              }).catch(function (err) {
+                console.error(err);
+                alert('Error: ' + JSON.stringify(err));
+              });
+            });
+            // ...
+          });
+        })
+        ```
