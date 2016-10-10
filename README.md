@@ -208,46 +208,7 @@
     ionic build android;
     ionic run android;
     ```
-    - TODO: genymotion setup
 
 ## Branch Test
 
 - ...
-
-## Test
-  ```bash
-  ionic start t2 tabs;
-  cd t2;
-  ionic platform add ios;
-  ionic platform add android;
-  ionic resources;
-  cordova plugin remove io.branch.sdk;
-  cordova plugin add https://github.com/BranchMetrics/Cordova-Ionic-PhoneGap-Deferred-Deep-Linking-SDK.git --variable BRANCH_KEY=key_live_jnBhaHwt5K8xtn4g4hblHoleqsocI6C2 --variable URI_SCHEME=branchionic;
-  ionic build ios; ionic emulate ios;
-  # add branch code
-
-  # Branch.initSession() is failing because Branch is undefined
-  if (!ionic.platform.isWebView()) {}
-  ```
-
-
-## hello
- - **update APP_NAME/www/js/app.js**
- 
-    ```javascript
-    .run(function($ionicPlatform) {
-      $ionicPlatform.ready(function() {
-        $ionicPlatform.on('deviceready', function() {
-          // ...
-          Branch.initSession().then(function (res) {
-            console.log(res);
-            alert('Response: ' + JSON.stringify(res));
-          }).catch(function (err) {
-            console.error(err);
-            alert('Error: ' + JSON.stringify(err));
-          });
-        });
-        // ...
-      });
-    })
-    ```
