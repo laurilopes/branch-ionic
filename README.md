@@ -207,7 +207,6 @@
     cd APP_NAME;
     ionic run android;
     ```
-    - TODO: genymotion setup
 
 ## Branch Test
 
