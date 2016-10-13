@@ -47,4 +47,19 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('DeepLink', function($window) {
+  var data = {};
+
+  return {
+    get: function() {
+      return data;
+    },
+    set: function(json) {
+      data = json;
+      $window.location = "#/tab/chats/3";
+    }
+  };
 });
+

@@ -180,7 +180,6 @@
     
     ```sh
     cd APP_NAME;
-    ionic build ios;
     ionic run ios;
     ```
     
@@ -191,8 +190,9 @@
 
 - **test ios device**
 
-  ```sh
+    ```sh
     cd APP_NAME;
+    cordova plugin add cordova-plugin-console;
     ionic build ios;
     ```
 
@@ -205,7 +205,6 @@
   
     ```sh
     cd APP_NAME;
-    ionic build android;
     ionic run android;
     ```
     - TODO: genymotion setup
@@ -221,9 +220,10 @@
   ionic platform add ios;
   ionic platform add android;
   ionic resources;
+  cordova plugin add cordova-plugin-console;
   cordova plugin remove io.branch.sdk;
   cordova plugin add https://github.com/BranchMetrics/Cordova-Ionic-PhoneGap-Deferred-Deep-Linking-SDK.git --variable BRANCH_KEY=key_live_jnBhaHwt5K8xtn4g4hblHoleqsocI6C2 --variable URI_SCHEME=branchionic;
-  ionic build ios; ionic emulate ios;
+  ionic run ios;
   # add branch code
 
   # Branch.initSession() is failing because Branch is undefined

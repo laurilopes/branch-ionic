@@ -4,9 +4,9 @@
   <description>Branch Deep Linking Ionic App</description>
   <author email="support@branch.io" href="http://support.branch.io">Branch Support</author>
   <branch-config>
-      <ios-team-id value="PW4Q8885U7" />
-      <host name="cluv.app.link" scheme="https" />
-      <host name="cluv-alternate.app.link" scheme="https" />
+    <ios-team-id value="PW4Q8885U7"/>
+    <host name="cluv.app.link" scheme="https"/>
+    <host name="cluv-alternate.app.link" scheme="https"/>
   </branch-config>
   <content src="index.html"/>
   <access origin="*"/>
